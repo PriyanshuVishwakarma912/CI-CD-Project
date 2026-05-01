@@ -23,7 +23,7 @@ jobs:
             - name: Build and Push
               env:
                 ecr_registory: ${{ steps.login-ecr.outputs.registry  }}
-                ecr_repository: CI-CD-Project
+                ecr_repository: ci-cd-project
                 image_tag: latest
               run: |
                 docker build -t $ecr_registory/$ecr_repository:$image_tag .
