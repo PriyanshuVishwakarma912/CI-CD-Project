@@ -23,7 +23,7 @@ jobs:
             - name: Build and Push
               env:
                 ecr_registory: ${{ steps.login-ecr.outputs.registry  }}
-                ecr_repository: ci-cd-project
+                ecr_repository: project-1/flask-app
                 image_tag: latest
               run: |
                 docker build -t $ecr_registory/$ecr_repository:$image_tag .
